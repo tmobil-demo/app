@@ -1,11 +1,11 @@
 <?php
 
-$hostname = "172.17.0.1:3306";
+$hostname = "db";
 $username = "hodnoceni";
 $password = "hodnoceni";
 $db = "reviews";
 
-$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+$dbconnect= new mysqli($hostname,$username,$password,$db);
 
 if ($dbconnect->connect_error) {
   die("Database connection failed: " . $dbconnect->connect_error);
@@ -27,3 +27,4 @@ if(isset($_POST['submit'])) {
 
 }
 ?>
+
